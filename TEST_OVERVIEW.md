@@ -1,6 +1,6 @@
 # Test Overview
 
-This document describes the test organization for the network scanner project.
+This document describes the test organization for the packet crafter project.
 
 ## Test Structure
 

@@ -1,7 +1,7 @@
 //! Parsing utilities for command-line arguments.
 //!
 //! This module provides custom parser functions for complex argument types
-//! used by the network scanner, including MAC addresses and bitfield values.
+//! used by the packet crafter, including MAC addresses and bitfield values.
 
 /// Parses a MAC address string into a 6-byte array.
 ///
@@ -26,7 +26,7 @@
 /// # Examples
 ///
 /// ```rust
-/// use scanner::parsing::parse_mac;
+/// use packet_crafter::parsing::parse_mac;
 ///
 /// // Valid MAC address
 /// let mac = parse_mac("aa:bb:cc:dd:ee:ff").unwrap();
@@ -75,7 +75,7 @@ pub fn parse_mac(mac: &str) -> Result<[u8; 6], String> {
 /// # Examples
 ///
 /// ```rust
-/// use scanner::parsing::parse_bitfield;
+/// use packet_crafter::parsing::parse_bitfield;
 ///
 /// // Parse decimal
 /// assert_eq!(parse_bitfield("4").unwrap(), 4);

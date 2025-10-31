@@ -1,6 +1,6 @@
 //! Tests for command-line argument validation
 
-use scanner::Args;
+use packet_crafter::Args;
 
 #[test]
 fn test_validation_both_format_and_file() {
@@ -10,10 +10,10 @@ fn test_validation_both_format_and_file() {
         dest_port: 80,
         src_mac: [0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff],
         dst_mac: [0x11, 0x22, 0x33, 0x44, 0x55, 0x66],
-        l4_protocol: scanner::L4Protocol::Udp,
+        l4_protocol: packet_crafter::L4Protocol::Udp,
         timeout_ms: 1000,
         debug_file: Some("test.json".to_string()),
-        debug_format: Some(scanner::DebugFormat::Json),
+        debug_format: Some(packet_crafter::DebugFormat::Json),
         ip_bitfield: 0,
     };
     
@@ -28,7 +28,7 @@ fn test_validation_neither_format_nor_file() {
         dest_port: 80,
         src_mac: [0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff],
         dst_mac: [0x11, 0x22, 0x33, 0x44, 0x55, 0x66],
-        l4_protocol: scanner::L4Protocol::Udp,
+        l4_protocol: packet_crafter::L4Protocol::Udp,
         timeout_ms: 1000,
         debug_file: None,
         debug_format: None,
@@ -46,10 +46,10 @@ fn test_validation_format_without_file() {
         dest_port: 80,
         src_mac: [0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff],
         dst_mac: [0x11, 0x22, 0x33, 0x44, 0x55, 0x66],
-        l4_protocol: scanner::L4Protocol::Udp,
+        l4_protocol: packet_crafter::L4Protocol::Udp,
         timeout_ms: 1000,
         debug_file: None,
-        debug_format: Some(scanner::DebugFormat::Json),
+        debug_format: Some(packet_crafter::DebugFormat::Json),
         ip_bitfield: 0,
     };
     
@@ -64,7 +64,7 @@ fn test_validation_file_without_format() {
         dest_port: 80,
         src_mac: [0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff],
         dst_mac: [0x11, 0x22, 0x33, 0x44, 0x55, 0x66],
-        l4_protocol: scanner::L4Protocol::Udp,
+        l4_protocol: packet_crafter::L4Protocol::Udp,
         timeout_ms: 1000,
         debug_file: Some("test.json".to_string()),
         debug_format: None,
@@ -82,10 +82,10 @@ fn test_validation_extension_mismatch() {
         dest_port: 80,
         src_mac: [0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff],
         dst_mac: [0x11, 0x22, 0x33, 0x44, 0x55, 0x66],
-        l4_protocol: scanner::L4Protocol::Udp,
+        l4_protocol: packet_crafter::L4Protocol::Udp,
         timeout_ms: 1000,
         debug_file: Some("test.pcap".to_string()),
-        debug_format: Some(scanner::DebugFormat::Json),
+        debug_format: Some(packet_crafter::DebugFormat::Json),
         ip_bitfield: 0,
     };
     
@@ -100,10 +100,10 @@ fn test_validation_pcap_format() {
         dest_port: 80,
         src_mac: [0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff],
         dst_mac: [0x11, 0x22, 0x33, 0x44, 0x55, 0x66],
-        l4_protocol: scanner::L4Protocol::Udp,
+        l4_protocol: packet_crafter::L4Protocol::Udp,
         timeout_ms: 1000,
         debug_file: Some("test.pcap".to_string()),
-        debug_format: Some(scanner::DebugFormat::Pcap),
+        debug_format: Some(packet_crafter::DebugFormat::Pcap),
         ip_bitfield: 0,
     };
     

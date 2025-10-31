@@ -1,6 +1,6 @@
 //! Tests for output functionality (PCAP and JSON writing)
 
-use scanner::{Args, L4Protocol, packet::PacketBuilder, output::{write_pcap, write_json}, parsing};
+use packet_crafter::{Args, L4Protocol, packet::PacketBuilder, output::{write_pcap, write_json}, parsing};
 use std::fs;
 use tempfile::TempDir;
 use pcap_file::pcap::PcapReader;

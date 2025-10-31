@@ -1,5 +1,5 @@
 [package]
-name = "scanner"
+name = "packet_crafter"
 version = "0.1.0"
 edition = "2021"
 

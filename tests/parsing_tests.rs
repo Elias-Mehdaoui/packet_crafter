@@ -2,7 +2,7 @@
 //!
 //! Validates MAC address and bitfield parsing functionality.
 
-use scanner::parsing::{parse_mac, parse_bitfield};
+use packet_crafter::parsing::{parse_mac, parse_bitfield};
 
 // ==================== MAC Address Parsing ====================
 

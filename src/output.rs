@@ -47,7 +47,7 @@ struct PacketInfo {
 ///
 /// ```no_run
 /// use std::path::Path;
-/// use scanner::output::write_pcap;
+/// use packet_crafter::output::write_pcap;
 ///
 /// # fn main() -> Result<(), Box<dyn std::error::Error>> {
 /// let packet = vec![0xaa, 0xbb, 0xcc /* ... packet data ... */];
@@ -104,7 +104,7 @@ pub fn write_pcap(path: &Path, packet: &[u8]) -> Result<(), Box<dyn std::error::
 ///
 /// ```no_run
 /// use std::path::Path;
-/// use scanner::output::write_json;
+/// use packet_crafter::output::write_json;
 ///
 /// # fn main() -> Result<(), Box<dyn std::error::Error>> {
 /// let packet = vec![0xaa, 0xbb, 0xcc, 0xdd];

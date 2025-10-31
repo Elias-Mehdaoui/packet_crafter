@@ -2,7 +2,7 @@
 //!
 //! Verifies that PacketBuilder correctly constructs Ethernet/IPv4/TCP/UDP packets.
 
-use scanner::{Args, L4Protocol, packet::PacketBuilder, parsing};
+use packet_crafter::{Args, L4Protocol, packet::PacketBuilder, parsing};
 use pnet::packet::Packet;
 use pnet::packet::ethernet::{EthernetPacket, EtherTypes};
 use pnet::packet::ipv4::Ipv4Packet;

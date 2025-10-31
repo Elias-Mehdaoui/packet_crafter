@@ -1,17 +1,17 @@
-//! # Network Scanner
+//! # Packet Crafter
 //!
-//! A raw socket network scanner that constructs and sends custom Ethernet, IPv4, and UDP/TCP packets.
+//! A raw socket packet crafter that constructs and (optionally) sends custom Ethernet, IPv4, and UDP/TCP packets.
 //!
 //! This tool allows you to manually craft network packets with custom MAC addresses, IP addresses,
-//! and Layer 4 protocols for network scanning and testing purposes.
+//! and Layer 4 protocols for network analysis and testing purposes.
 //!
 //! ## Usage
 //!
 //! ```bash
-//! # Basic UDP scan
+//! # Basic UDP packet
 //! cargo run -- --src_ip=192.168.25.2 --dst_ip=192.168.1.25 --dest_port=8080
 //!
-//! # TCP scan with custom MAC addresses
+//! # TCP packet with custom MAC addresses
 //! cargo run -- --src_mac=aa:bb:cc:dd:ee:ff --dst_mac=11:22:33:44:55:66 --l4_protocol=tcp
 //!
 //! # Generate debug output in PCAP format
@@ -31,10 +31,10 @@
 //! - IPv4 bitfield manipulation for flags/fragmentation offset
 
 use clap::Parser;
-use scanner::{Args, DebugFormat, packet::PacketBuilder, output::{write_pcap, write_json}};
+use packet_crafter::{Args, DebugFormat, packet::PacketBuilder, output::{write_pcap, write_json}};
 use std::path::Path;
 
-/// Main entry point for the network scanner.
+/// Main entry point for the packet crafter.
 ///
 /// This function:
 /// 1. Parses command-line arguments

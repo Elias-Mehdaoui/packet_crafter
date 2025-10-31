@@ -97,7 +97,7 @@ impl PacketBuilder {
     /// # Examples
     ///
     /// ```no_run
-    /// use scanner::{Args, packet::PacketBuilder};
+    /// use packet_crafter::{Args, packet::PacketBuilder};
     /// use clap::Parser;
     ///
     /// # let args = Args::parse();

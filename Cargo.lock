@@ -354,6 +354,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "384b8ab6d37215f3c5301a95a4accb5d64aa607f1fcb26a11b5303878451b4fe"
 
 [[package]]
+name = "packet_crafter"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "clap",
+ "hex",
+ "pcap-file",
+ "pnet",
+ "serde",
+ "serde_json",
+ "tempfile",
+]
+
+[[package]]
 name = "pcap-file"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -532,20 +546,6 @@ name = "ryu"
 version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "28d3b2b1366ec20994f1fd18c3c594f05c5dd4bc44d8bb0c1c632c8d6829481f"
-
-[[package]]
-name = "scanner"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "clap",
- "hex",
- "pcap-file",
- "pnet",
- "serde",
- "serde_json",
- "tempfile",
-]
 
 [[package]]
 name = "serde"

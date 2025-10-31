@@ -27,9 +27,9 @@ pub enum DebugFormat {
     Pcap,
 }
 
-/// Command-line arguments for the network scanner.
+/// Command-line arguments for the packet crafter.
 #[derive(Parser, Debug)]
-#[command(about = "Network Scanner")]
+#[command(about = "Packet Crafter")]
 pub struct Args {
     /// Source IPv4 address to place in the IP header.
     #[arg(long = "src_ip", default_value = "192.168.0.1")]

@@ -1,1 +1,18 @@
 /target
+
+# Debug output files
+*.pcap
+*.json
+debug.*
+output.*
+test.*
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
