@@ -12,9 +12,7 @@ use std::path::Path;
 /// Layer 4 (transport layer) protocol options for packet construction.
 #[derive(ValueEnum, Clone, Debug, PartialEq)]
 pub enum L4Protocol {
-    /// Transmission Control Protocol - connection-oriented, reliable
     Tcp,
-    /// User Datagram Protocol - connectionless, best-effort delivery
     Udp,
 }
 

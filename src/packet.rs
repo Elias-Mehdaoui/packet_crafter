@@ -16,13 +16,12 @@ use crate::{Args, L4Protocol};
 /// Packet builder for constructing raw network packets.
 ///
 /// This struct provides methods to build complete Ethernet frames with IPv4 and
-/// TCP/UDP packets. It handles proper header construction and checksum calculation.
+/// TCP/UDP packets.
 
 /// Builder for constructing raw network packets.
 ///
 /// `PacketBuilder` creates complete network packets including Ethernet (L2),
-/// IPv4 (L3), and TCP/UDP (L4) headers. All checksums are computed correctly
-/// unless documented otherwise.
+/// IPv4 (L3), and TCP/UDP (L4) headers.
 ///
 /// # Packet Structure
 ///
@@ -122,9 +121,6 @@ impl PacketBuilder {
     /// - UDP header (8 bytes)
     /// - Payload
     ///
-    /// The UDP checksum is computed correctly according to RFC 768,
-    /// including the IPv4 pseudo-header.
-    ///
     /// # Arguments
     ///
     /// * `payload` - The data to include in the UDP packet
@@ -161,10 +157,6 @@ impl PacketBuilder {
     /// - IPv4 header (20 bytes)
     /// - TCP header (20 bytes, no options)
     /// - Payload
-    ///
-    /// The TCP packet is configured as a SYN packet (flags=0x02) suitable
-    /// for connection initiation. The TCP checksum is computed correctly
-    /// according to RFC 793, including the IPv4 pseudo-header.
     ///
     /// # Arguments
     ///

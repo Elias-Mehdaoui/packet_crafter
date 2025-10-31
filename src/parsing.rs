@@ -1,7 +1,6 @@
 //! Parsing utilities for command-line arguments.
 //!
-//! This module provides custom parser functions for complex argument types
-//! used by the packet crafter, including MAC addresses and bitfield values.
+//! This module provides custom parser functions.
 
 /// Parses a MAC address string into a 6-byte array.
 ///
